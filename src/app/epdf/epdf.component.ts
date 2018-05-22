@@ -41,6 +41,18 @@ getBase64Image(img) {
 }
 
 //var base64 = (document.getElementById("imageid"));
+// download(){
+//   let doc = new jsPDF();
+//   for(var i=0;i<this.images.length;i++){
+//    let imageData= this.getBase64Image(document.getElementById('img'+i));
+//    console.log(imageData);
+//      doc.addImage(imageData, "JPG", 10, (i+1)*10, 180, 150);
+//      doc.addPage();
+     
+//   }
+//   doc.save('Test.pdf');
+// }
+
 download(){
   let doc = new jsPDF();
   for(var i=0;i<this.images.length;i++){
@@ -48,7 +60,10 @@ download(){
    console.log(imageData);
      doc.addImage(imageData, "JPG", 10, (i+1)*10, 180, 150);
      doc.addPage();
+     
   }
-  doc.save('Test.pdf');
+  doc.save('new.pdf');
 }
+
+
 }
